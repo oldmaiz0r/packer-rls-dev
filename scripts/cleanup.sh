@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Cleanup installs
-yum -y remove glibc-headers glibc-devel mpfr kernel-devel kernel-headers cpp gcc
 yum -y clean all
 
 # Cleanup bash history

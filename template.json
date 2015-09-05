@@ -2,10 +2,11 @@
     "variables": {
         "atlas_username": "oldmaiz0r",
         "atlas_name": "rls-dev-centos_6.6",
-        "artifactversion": "0.0.1"
+        "artifactversion": "0.0.4"
     },
     "push": {
       "name": "RioSEO/{{user `atlas_name`}}",
+      "token": "{{user `atlas_token`}}",
       "vcs": true
     },
     "provisioners": [
@@ -25,7 +26,6 @@
             }
         }
     ],
-
     "builders": [
         {
             "type": "virtualbox-iso",
@@ -36,6 +36,7 @@
             "iso_url": "http://archive.kernel.org/centos-vault/6.6/isos/x86_64/CentOS-6.6-x86_64-minimal.iso",
             "ssh_username": "vagrant",
             "ssh_password": "vagrant",
+            "ssh_wait_timeout": "30m",
             "shutdown_command": "sudo -S shutdown -P now",
             "disk_size": 20480,
             "headless": false,
@@ -56,7 +57,7 @@
         {
             "type": "atlas",
             "only": ["virtualbox-iso"],
-            "token": "yapOs46KU5jcvg.atlasv1.pdiQkLC1fsW7El0zJ1NJraUvJQ714F8JdDsDLfTUSpON1jygg7tqST0bzoRO0ZAEnvw",
+            "token": "{{user `atlas_token`}}",
             "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
             "artifact_type": "vagrant.box",
             "metadata": {

@@ -1,5 +1,9 @@
 # Cache objects
 packer_cache/
+output-virtualbox-iso/
 
 # For built boxes
 *.box
+
+# user vars
+vars.json
