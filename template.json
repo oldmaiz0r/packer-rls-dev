@@ -2,7 +2,7 @@
     "variables": {
         "atlas_username": "oldmaiz0r",
         "atlas_name": "rls-dev-centos_6.6",
-        "artifactversion": "0.0.4"
+        "artifactversion": "0.0.6"
     },
     "push": {
       "name": "RioSEO/{{user `atlas_name`}}",
