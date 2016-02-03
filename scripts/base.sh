@@ -5,7 +5,7 @@ yum -y update
 rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
 yum -y install httpd php56w php56w-opcache php56w-gd php56w-intl php56w-mbstring php56w-mysql php56w-pdo php56w-mcrypt php56w-pecl-memcached php56w-xml php56w-devel php56w-pecl-xdebug ph56w-soap
-yum -y install gcc wget screen nodejs openssl-devel libssh2 libssh2-devel mod_ssl memcached subversion git perl-DBD-MySQL facter vim-enhanced vim-common kernel-devel dos2unix
+yum -y install gcc wget screen openssl-devel libssh2 libssh2-devel mod_ssl memcached subversion git perl-DBD-MySQL facter vim-enhanced vim-common kernel-devel dos2unix nodejs npm 
 
 # php mongo drivers
 if [ ! -f "/etc/php.d/mongodb.ini" ]; then
